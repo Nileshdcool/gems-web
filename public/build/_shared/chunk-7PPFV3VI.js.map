@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../app/services/auth/user-context.tsx", "../../../app/utils/assert.ts"],
+  "sourcesContent": ["import { createContext, useContext } from \"react\";\r\nimport type { AuthUser } from \"~/services/session.server\";\r\nimport { assertValue } from \"~/utils/assert\";\r\n\r\nexport const UserContext = createContext<AuthUser | undefined>(undefined);\r\n\r\nexport function useUser(): AuthUser {\r\n  return assertValue(useContext(UserContext), \"user not set in context\");\r\n}\r\n\r\nexport function useIsLoggedIn(): boolean {\r\n  return !!useContext(UserContext);\r\n}\r\n", "export function assert(value: any, message = \"must be defined\"): asserts value {\r\n  if (!value) {\r\n    throw new Error(message);\r\n  }\r\n}\r\n\r\nexport function assertValue<T>(\r\n  value: T | undefined | null,\r\n  message = \"must be defined\"\r\n): T {\r\n  if (value != null) {\r\n    return value;\r\n  } else {\r\n    throw new Error(message);\r\n  }\r\n}\r\n"],
+  "mappings": ";;;;;;;;AAAA,mBAA0C;;;ACMnC,SAAS,YACd,OACA,UAAU,mBACP;AACH,MAAI,SAAS,MAAM;AACjB,WAAO;AAAA,EACT,OAAO;AACL,UAAM,IAAI,MAAM,OAAO;AAAA,EACzB;AACF;;;ADXO,IAAM,kBAAc,4BAAoC,MAAS;AAEjE,SAAS,UAAoB;AAClC,SAAO,gBAAY,yBAAW,WAAW,GAAG,yBAAyB;AACvE;",
+  "names": []
+}

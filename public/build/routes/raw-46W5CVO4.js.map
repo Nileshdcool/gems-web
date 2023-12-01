@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../app/routes/raw.tsx"],
+  "sourcesContent": ["import { Fragment } from \"react\";\r\nimport {generatePrivateKey, getPublicKey} from 'nostr-tools'\r\n\r\nexport default function Raw() {\r\n\r\nlet pk = getPublicKey(\"1b260abeef51e16175954b5fcee77b55aa990360d29e0e94afc68e0dcd45aeae\")\r\n\r\n    \r\n    return <>\r\n        <Fragment>\r\n            <div style={{ color: \"white\", marginLeft:'9.2rem' }}>\r\n                {pk}\r\n            </div>\r\n        </Fragment>\r\n    </>\r\n}"],
+  "mappings": ";;;;;;;;;;;;AAAA,mBAAyB;AAQd;AALI,SAAR,MAAuB;AAE9B,MAAI,KAAK,aAAa,kEAAkE;AAGpF,SAAO,sFACH,6DAAC,yBACG,6DAAC,SAAI,OAAO,EAAE,OAAO,SAAS,YAAW,SAAS,GAC7C,gBADL;AAAA;AAAA;AAAA;AAAA,SAEA,KAHJ;AAAA;AAAA;AAAA;AAAA,SAIA,KALG;AAAA;AAAA;AAAA;AAAA,SAMP;AACJ;",
+  "names": []
+}
